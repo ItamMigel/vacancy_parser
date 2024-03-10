@@ -11,7 +11,7 @@ def get_links(text):
     data = requests.get(
         url=f'https://hh.ru/search/resume?text={text}&area=1&isDefaultArea=true&exp_period=all_time&logic=normal&pos=full_text&fromSearchLine=false&page=1',
         headers={"user-agent": ua.random}
-    )
+    ) 
     if data.status_code != 200:
         return
     soup = BeautifulSoup(data.content, 'lxml')
